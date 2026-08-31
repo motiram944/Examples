@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Us & FAQs | Viya Films</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="nav-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-title">
+        Viya <span>Films</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="book.html" class="active">Book Us</a></li>
+      </ul>
+
+      <a href="book.html" class="btn-terracotta"><i class="fa-solid fa-feather-pointed"></i> Inquire Now</a>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section style="padding: 9rem 0 4rem 0; background: var(--bg-sand-surface); text-align: center; border-bottom: 1px solid var(--border-light);">
+    <div class="container">
+      <span class="hero-tag">Inquire & Reserve</span>
+      <h1 class="font-serif" style="font-size: 2.8rem; margin-bottom: 1rem;">Let's Capture Your Story Together</h1>
+      <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">Wedding packages start at ₹1,50,000 per day. Complete the form to get a detailed quote within 48 hours.</p>
+    </div>
+  </section>
+
+  <!-- Booking Form -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="booking-card-warm">
+        <h2 class="font-serif" style="font-size: 2rem; color: var(--accent-terracotta); text-align: center; margin-bottom: 2rem;">Booking Inquiry Form</h2>
+        <form id="bookingFormWarm">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+            <div class="form-field-group">
+              <label class="form-label-warm">First Name *</label>
+              <input type="text" class="input-warm" required placeholder="First name">
+            </div>
+            <div class="form-field-group">
+              <label class="form-label-warm">Last Name *</label>
+              <input type="text" class="input-warm" required placeholder="Last name">
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+            <div class="form-field-group">
+              <label class="form-label-warm">Couple Names (Bride & Groom) *</label>
+              <input type="text" class="input-warm" required placeholder="e.g. Komal & Aman">
+            </div>
+            <div class="form-field-group">
+              <label class="form-label-warm">Email Address *</label>
+              <input type="email" class="input-warm" required placeholder="name@domain.com">
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+            <div class="form-field-group">
+              <label class="form-label-warm">Phone / WhatsApp Number *</label>
+              <input type="tel" class="input-warm" required placeholder="+91 9519222422">
+            </div>
+            <div class="form-field-group">
+              <label class="form-label-warm">Job Type *</label>
+              <select class="input-warm" required>
+                <option value="">Select Job Type</option>
+                <option value="wedding">Wedding</option>
+                <option value="prewedding">Pre-Wedding</option>
+                <option value="engagement">Engagement</option>
+                <option value="birthday">Birthday / Event</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+            <div class="form-field-group">
+              <label class="form-label-warm">Primary Event Date *</label>
+              <input type="date" class="input-warm" required>
+            </div>
+            <div class="form-field-group">
+              <label class="form-label-warm">Venue Location & City *</label>
+              <input type="text" class="input-warm" required placeholder="e.g. Mumbai / Udaipur">
+            </div>
+          </div>
+
+          <div class="form-field-group">
+            <label class="form-label-warm">Event Details & Style *</label>
+            <textarea class="input-warm" style="height: 120px; resize: none;" required placeholder="Maharashtrian, South Indian, Punjabi, Destination details..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-terracotta" style="width: 100%; justify-content: center; padding: 1rem;">Submit Booking Request</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion -->
+  <section class="section-padding" style="background: var(--bg-sand-surface);">
+    <div class="container">
+      <div class="section-header-centered">
+        <span class="hero-tag">Got Questions?</span>
+        <h2 class="font-serif" style="font-size: 2.2rem;">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item open">
+          <div class="faq-question">
+            <span>What is your base wedding pricing?</span>
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            Our wedding photography and cinematography packages start from ₹1,50,000 per day. Final pricing depends on the number of shoot days, travel logistics, and specific team size requirements.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How and when will we receive our photos and videos?</span>
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            We deliver high-resolution color-graded photos via an online Pic-Time gallery within 30 days. Cinematic highlight films and full videos are delivered via our private ViyaFilms OTT streaming platform.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What is your payment structure?</span>
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            We follow a structured 3-stage payment plan: 50% deposit upon booking to reserve the dates, 30% before or on the first day of the event, and 20% prior to final deliverable release.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Do you travel for destination weddings?</span>
+            <i class="fa-solid fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            Yes! We have shot over 1,000 weddings in 4+ countries including Baku, Dubai, Kenya, Europe, and 20+ cities in India. We handle all logistics seamlessly.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-warm">
+    <div class="container">
+      <div class="footer-warm-bottom">
+        <p>&copy; 2026 Viya Films. All Rights Reserved.</p>
+        <p><a href="index.html" style="color: #ffffff;">Return to Home</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

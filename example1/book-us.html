@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Us & Package Calculator | Viya Films</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="site-header scrolled">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-logo-icon">V</div>
+        <span class="brand-name">VIYA<span>FILMS</span></span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+        <li><a href="book-us.html" class="nav-link active">Book Us</a></li>
+      </ul>
+
+      <a href="book-us.html" class="btn-luxe"><i class="fa-solid fa-calendar-check"></i> Book Your Date</a>
+
+      <button class="mobile-toggle" aria-label="Open menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section style="padding: 10rem 0 4rem 0; background: linear-gradient(180deg, var(--bg-surface) 0%, var(--bg-dark) 100%); text-align: center; border-bottom: 1px solid var(--border-gold);">
+    <div class="container">
+      <span class="section-tagline">Reservations & Quotes</span>
+      <h1 class="section-title">Book Viya Films For Your Date</h1>
+      <p class="section-desc" style="max-width: 650px; margin: 0 auto;">Our wedding packages start from ₹1,50,000 per day. Calculate your estimate below or submit an inquiry.</p>
+    </div>
+  </section>
+
+  <!-- Calculator Section -->
+  <section class="section-padding" style="background: var(--bg-dark);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tagline">Estimate Budget</span>
+        <h2 class="section-title">Custom Package Calculator</h2>
+      </div>
+
+      <div class="calc-wrapper">
+        <div class="calc-controls">
+          <div class="form-group">
+            <label class="form-label">Number of Event Days: <span class="range-val" id="calcDaysVal">2 Days</span></label>
+            <input type="range" id="calcDays" class="calc-slider" min="1" max="5" value="2">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Coverage Tier:</label>
+            <div class="btn-radio-group">
+              <div class="btn-radio active" data-pkg="essential" data-multiplier="1.0">Essential (Photo+Video)</div>
+              <div class="btn-radio" data-pkg="cinematic" data-multiplier="1.35">Cinematic + Drone</div>
+              <div class="btn-radio" data-pkg="royal" data-multiplier="1.75">Royal Feature Film</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="calc-result-box">
+          <span style="color: var(--text-muted); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px;">Estimated Investment</span>
+          <div class="calc-price" id="calcPriceDisplay">₹ 3,00,000</div>
+          <p style="color: var(--text-muted); font-size: 0.85rem;">Includes 25+ senior crew, Pic-Time photo gallery, and ViyaFilms OTT video access.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Form Section -->
+  <section class="section-padding" style="background: var(--bg-surface);">
+    <div class="container">
+      <div class="booking-wrapper">
+        <h2 class="font-serif" style="font-size: 2rem; color: var(--accent-gold); margin-bottom: 2rem; text-align: center;">Official Inquiry Form</h2>
+        <form id="bookingForm">
+          <div class="form-grid-2" style="margin-bottom: 1.5rem;">
+            <div class="form-group">
+              <label class="form-label">First Name *</label>
+              <input type="text" class="form-control" required placeholder="Enter first name">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Last Name *</label>
+              <input type="text" class="form-control" required placeholder="Enter last name">
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1.5rem;">
+            <label class="form-label">Couple Names (Bride & Groom) *</label>
+            <input type="text" class="form-control" required placeholder="e.g. Komal & Aman">
+          </div>
+
+          <div class="form-grid-2" style="margin-bottom: 1.5rem;">
+            <div class="form-group">
+              <label class="form-label">Email Address *</label>
+              <input type="email" class="form-control" required placeholder="info@domain.com">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Phone / WhatsApp *</label>
+              <input type="tel" class="form-control" required placeholder="+91 9519222422">
+            </div>
+          </div>
+
+          <div class="form-grid-2" style="margin-bottom: 1.5rem;">
+            <div class="form-group">
+              <label class="form-label">Event Type *</label>
+              <select class="form-control" required>
+                <option value="">Select Option</option>
+                <option value="wedding">Wedding</option>
+                <option value="prewedding">Pre-Wedding</option>
+                <option value="engagement">Engagement</option>
+                <option value="sangeet">Sangeet & Party</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Primary Event Date *</label>
+              <input type="date" class="form-control" required>
+            </div>
+          </div>
+
+          <div class="form-grid-2" style="margin-bottom: 1.5rem;">
+            <div class="form-group">
+              <label class="form-label">Main Shoot Venue & City *</label>
+              <input type="text" class="form-control" required placeholder="Enter venue & city name">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Expected Guest Count *</label>
+              <input type="number" class="form-control" required placeholder="e.g. 500">
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 2rem;">
+            <label class="form-label">Additional Details / Wedding Style *</label>
+            <textarea class="form-control" required placeholder="Maharashtrian, South Indian, Punjabi, Destination Wedding details, etc."></textarea>
+          </div>
+
+          <button type="submit" class="btn-luxe" style="width: 100%; padding: 1rem;"><i class="fa-solid fa-paper-plane"></i> Submit Booking Inquiry</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 Viya Films. All Rights Reserved.</p>
+        <p><a href="index.html" style="color: var(--accent-gold); text-decoration: none;">Return to Home</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
