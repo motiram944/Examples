@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Masonry Filter
+  // Masonry / Gallery Filter
   const filterTabs = document.querySelectorAll('.masonry-tab');
   const masonryItems = document.querySelectorAll('.masonry-item');
 
@@ -14,10 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const itemCat = item.getAttribute('data-category');
         if (category === 'all' || itemCat === category) {
           item.style.display = 'block';
-          setTimeout(() => item.style.opacity = '1', 50);
+          item.style.opacity = '1';
+          item.style.transform = 'scale(1)';
         } else {
           item.style.opacity = '0';
-          setTimeout(() => item.style.display = 'none', 300);
+          item.style.transform = 'scale(0.95)';
+          item.style.display = 'none';
         }
       });
     });
