@@ -1,4 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Mobile Menu Drawer Warm
+  const mobileToggleWarm = document.querySelector('.mobile-toggle-warm');
+  const mobileDrawerWarm = document.querySelector('.mobile-drawer-warm');
+  const mobileCloseWarm = document.querySelector('.mobile-drawer-close-warm');
+
+  if (mobileToggleWarm && mobileDrawerWarm) {
+    mobileToggleWarm.addEventListener('click', () => {
+      mobileDrawerWarm.classList.add('open');
+    });
+
+    if (mobileCloseWarm) {
+      mobileCloseWarm.addEventListener('click', () => {
+        mobileDrawerWarm.classList.remove('open');
+      });
+    }
+  }
+
   // Masonry / Gallery Filter
   const filterTabs = document.querySelectorAll('.masonry-tab');
   const masonryItems = document.querySelectorAll('.masonry-item');
