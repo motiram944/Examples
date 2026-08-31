@@ -498,6 +498,20 @@ h1, h2, h3, h4, .font-serif {
   margin-bottom: 0.5rem;
 }
 
+/* Hero Button Group */
+.hero-btn-group {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+/* Booking Form Grid */
+.form-grid-2-warm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
 .input-warm {
   width: 100%;
   padding: 0.85rem 1rem;
@@ -505,7 +519,7 @@ h1, h2, h3, h4, .font-serif {
   border-radius: 6px;
   background: var(--bg-sand-light);
   font-family: var(--font-sans);
-  font-size: 0.95rem;
+  font-size: 16px; /* Prevents auto-zoom on mobile */
   color: var(--text-primary);
   transition: var(--transition);
 }
@@ -619,17 +633,28 @@ h1, h2, h3, h4, .font-serif {
   font-family: var(--font-serif);
 }
 
-/* Responsive */
+/* Responsive Rules */
 @media (max-width: 992px) {
   .nav-links { display: none; }
   .btn-desktop-warm { display: none; }
   .mobile-toggle-warm { display: block; }
-  .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
-  .photo-stack-wrapper { height: 400px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .photo-stack-wrapper {
+    height: 460px;
+    margin-top: 3.5rem;
+    width: 100%;
+  }
   .masonry-grid { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
   .stories-grid { grid-template-columns: 1fr; }
   .studio-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-warm-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  .form-grid-2-warm {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 }
 
 @media (max-width: 600px) {
@@ -637,6 +662,37 @@ h1, h2, h3, h4, .font-serif {
   .brand-title { font-size: 1.15rem; letter-spacing: 1.5px; }
   .section-padding { padding: 4rem 0; }
   
+  .hero-btn-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.85rem;
+  }
+  .hero-btn-group .btn-terracotta {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 0.9rem 1.25rem;
+    font-size: 0.85rem;
+  }
+
+  .photo-stack-wrapper {
+    height: 380px;
+    margin-top: 4rem;
+    width: 100%;
+  }
+  .stack-card-1 {
+    width: 85%;
+    height: 290px;
+    top: 0;
+    left: 0;
+  }
+  .stack-card-2 {
+    width: 75%;
+    height: 250px;
+    bottom: 0;
+    right: 0;
+  }
+
   .masonry-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -657,11 +713,10 @@ h1, h2, h3, h4, .font-serif {
     font-size: 0.75rem;
     padding: 0.5rem 1.1rem;
   }
-  .booking-card-warm { padding: 1.5rem; }
+  .booking-card-warm { padding: 1.5rem 1.25rem; }
   .hero-heading { font-size: 2.1rem; }
-  .hero-paragraph { font-size: 0.95rem; }
+  .hero-paragraph { font-size: 0.95rem; margin-bottom: 1.75rem; }
   .studio-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
   .studio-stat-val { font-size: 2.2rem; }
   .footer-warm-grid { grid-template-columns: 1fr; }
-  .photo-stack-wrapper { height: 320px; }
 }
