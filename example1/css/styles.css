@@ -845,9 +845,10 @@ textarea.form-control {
 
 /* Responsiveness */
 @media (max-width: 992px) {
-  .nav-menu { display: none; }
-  .header-btn-desktop { display: none; }
-  .mobile-toggle { display: block; }
+  .nav-menu { display: none !important; }
+  .site-header .btn-luxe { display: none !important; }
+  .mobile-drawer .btn-luxe { display: inline-flex !important; width: 100%; justify-content: center; margin-top: 1.5rem; }
+  .mobile-toggle { display: block !important; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
   .calc-wrapper { grid-template-columns: 1fr; }
