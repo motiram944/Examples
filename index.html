@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viya Films - Design Proposal Demos</title>
+  <link rel="icon" type="image/svg+xml" href="example1/assets/images/favicon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Outfit:wght@300;400;600;700&display=swap');
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #0a0b0e;
+      color: #f3f4f6;
+      font-family: 'Outfit', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 3rem 1.5rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .brand-title {
+      font-family: 'Cinzel', serif;
+      font-size: 2.8rem;
+      letter-spacing: 4px;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #fff 0%, #f3e5ab 50%, #d4af37 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      color: #9ca3af;
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .proposals-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+    }
+
+    .proposal-card {
+      background: rgba(22, 25, 34, 0.85);
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.35s ease;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    }
+
+    .proposal-card:hover {
+      transform: translateY(-8px);
+      border-color: #d4af37;
+      box-shadow: 0 25px 50px rgba(212, 175, 55, 0.2);
+    }
+
+    .card-banner {
+      height: 220px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .card-banner-overlay {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: linear-gradient(180deg, transparent 40%, rgba(22, 25, 34, 1) 100%);
+    }
+
+    .card-body {
+      padding: 2rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .proposal-tag {
+      color: #d4af37;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .proposal-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.6rem;
+      color: #fff;
+      margin-bottom: 0.75rem;
+    }
+
+    .proposal-desc {
+      color: #9ca3af;
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .btn-view {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.5rem;
+      background: linear-gradient(135deg, #d4af37 0%, #b89228 100%);
+      color: #0a0b0e;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 6px;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-view:hover {
+      background: linear-gradient(135deg, #e5c158 0%, #d4af37 100%);
+      transform: translateY(-2px);
+    }
+
+    .footer {
+      text-align: center;
+      color: #6b7280;
+      font-size: 0.85rem;
+      margin-top: 4rem;
+    }
+
+    @media (max-width: 768px) {
+      .proposals-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <h1 class="brand-title">VIYA FILMS</h1>
+      <p class="subtitle">Select a website proposal below to view the interactive live design demos created for Vitthal Janardan.</p>
+    </div>
+
+    <div class="proposals-grid">
+      <!-- Proposal 1 Card -->
+      <div class="proposal-card">
+        <div class="card-banner" style="background-image: url('ex1.webp');">
+          <div class="card-banner-overlay"></div>
+        </div>
+        <div class="card-body">
+          <div>
+            <span class="proposal-tag">Option 1 • Dark Luxe</span>
+            <h2 class="proposal-title">Editorial Cinematic Theme</h2>
+            <p class="proposal-desc">High-end luxury dark obsidian theme with champagne gold accents, dynamic hero slider, price calculator estimator, Lightbox gallery, and client proofing showcase.</p>
+          </div>
+          <a href="example1/index.html" class="btn-view"><i class="fa-solid fa-arrow-right"></i> Open Proposal 1 (example1)</a>
+        </div>
+      </div>
+
+      <!-- Proposal 2 Card -->
+      <div class="proposal-card">
+        <div class="card-banner" style="background-image: url('ex9.webp');">
+          <div class="card-banner-overlay"></div>
+        </div>
+        <div class="card-body">
+          <div>
+            <span class="proposal-tag" style="color: #b86b53;">Option 2 • Warm Sand</span>
+            <h2 class="proposal-title">Artisanal Minimalist Theme</h2>
+            <p class="proposal-desc">Warm sand & terracotta palette, split-screen narrative hero, Pinterest-style masonry photo grid, real couple Love Stories, studio stats, and FAQ accordion.</p>
+          </div>
+          <a href="example2/index.html" class="btn-view" style="background: linear-gradient(135deg, #b86b53 0%, #8b7355 100%); color: #fff;"><i class="fa-solid fa-arrow-right"></i> Open Proposal 2 (example2)</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2026 Viya Films. All Rights Reserved. Created by Pair Programming Assistant.</p>
+    </div>
+  </div>
+
+</body>
+</html>
